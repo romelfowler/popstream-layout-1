@@ -1,0 +1,347 @@
+
+:root {
+    --body-font: "Inter", sans-serif;
+    --theme-bg: #1f1d2b;
+    --body-color: #808191;
+    --button-bg: #384E60;
+    --border-color: rgb(128 129 145 / 24%);
+    --video-bg: #252936;
+    --delay: 0s;
+    --theme-btn: #f16722;
+  }
+  /* !! IMPORT dolly.min.css !! */
+/* the code below it's only for the demo */
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+/* BREAKPOINTS */
+/* COLORS */
+::-moz-selection {
+  background: var(--theme-btn);
+}
+
+::selection {
+  background: var(--theme-btn);
+}
+
+/* TEXTS */
+.bold {
+  font-family: var(--body-font);
+}
+
+.dolly-font { 
+  font-family: var(--body-font);
+}
+h2.dolly-font {
+  font-family: var(--body-font);
+  font-size: 2rem;
+  line-height: 1.2;
+}
+body, html {
+  font-family: var(--body-font);
+  background-color: var(--theme-bg);
+}
+.image-wrap {
+  width: 50%;
+  margin-right: 25px;
+}
+/* BUTTONS */
+.btn {
+  padding: 5px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin: 10px;
+  display: block;
+  color: white;
+  background-color: var(--theme-btn);
+}
+.btn:hover {
+  background-color: white;
+  color: var(--theme-btn);
+}
+.pop-list {
+  padding-left: 2rem;
+  line-height: 1.7;
+}
+/* HEADER */
+.header {
+  padding: 30px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: auto;
+  z-index: 99999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 778px) {
+  .header {
+    padding: 0px 20px;
+  }
+}
+.header .nav button, .header .nav a {
+  text-decoration: none;
+  margin-left: 20px;
+  color: white;
+}
+.header .nav .btn {
+  color: white;
+}
+.header .nav .btn:hover {
+  background-color: white;
+  color: var(--theme-btn);
+}
+.header .nav .dolly-anchor.active-anchor {
+  color: var(--theme-btn);
+}
+.header .logo {
+  font-size: 50px;
+  color: var(--theme-btn);
+  cursor: pointer;
+  z-index: 99999;
+  position: relative;
+}
+@media (max-width: 778px) {
+  .header .logo {
+    font-size: 40px;
+  }
+}
+
+.link {
+  font-size: 18px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  color: white;
+}
+.link a {
+  text-decoration: none;
+  color: var(--theme-btn);
+}
+
+/* LAYERS */
+#layer3 .image-wrap {
+  width: 100%;
+}
+.dolly-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.dolly-layer .header-content {
+  position: relative;
+  margin-bottom: 20px;
+}
+.dolly-layer .header-content h1 {
+  font-size: 2rem;
+  line-height: 1.7;
+}
+.dolly-layer .header-content .claim {
+  position: absolute;
+  font-size: 1.8vw;
+  color: white;
+  bottom: -13px;
+  width: 100%;
+}
+.dolly-layer p {
+  font-size: 16px;
+  padding: 10px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.dolly-layer span {
+  color: white;
+  font-size: 30px;
+  font-weight: 300;
+
+}
+
+.dolly-layer:nth-child(1) {
+  background-color: var(--theme-bg);
+}
+.dolly-layer:nth-child(2) {
+  background-color: var(--theme-bg);
+}
+.dolly-layer:nth-child(3) {
+  background-color: var(--theme-bg);
+}
+
+.text-medium {
+  font-size: 30px;
+}
+@media (max-width: 991px) {
+  .text-medium {
+    font-size: 25px;
+    line-height: 25px;
+  }
+}
+
+.examples .text-medium {
+  color: white;
+}
+.examples .examples-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 65vh;
+  margin-top: 30px;
+}
+@media (max-width: 991px) {
+  .examples .examples-wrap {
+    flex-direction: column;
+  }
+}
+.examples .examples-wrap .example {
+  width: 30%;
+  height: 30vh;
+  margin: 0 2% 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 8px dashed var(--theme-btn);
+}
+.examples .examples-wrap .example a {
+  text-decoration: none;
+}
+.examples .examples-wrap .example a:hover {
+  color: var(--theme-btn);
+}
+
+.examples .examples-wrap .example.more {
+  width: 94%;
+}
+
+@media (max-width: 991px) {
+  .examples .examples-wrap .example {
+    width: 100%;
+    padding: 15px 10px;
+    height: auto;
+    margin: 0 0% 2% 0%;
+  }
+  .dolly-container .dolly-layer {
+    flex-direction: column;
+}
+.image-wrap {
+  display: none;
+}
+.dolly-layer .header-content h1 {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  font-weight: bold;
+}
+h2.dolly-font {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  font-weight: bold;
+}
+.dolly-container .dolly-layer {
+  padding: 0 1rem !important;
+  margin-top: 20px;
+}
+.dolly-navigation {
+
+  padding: 20px 10px;
+}
+}
